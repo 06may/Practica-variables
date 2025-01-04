@@ -16,7 +16,7 @@ Configurar un entorno de desarrollo, declarar variables de diferentes tipos e im
 
 ### codigo
  
-    ´´´Java
+
 
     package variables;
 
@@ -45,10 +45,10 @@ Configurar un entorno de desarrollo, declarar variables de diferentes tipos e im
         System.out.println("var4: " +pi);
 
         System.out.println("var5: " +euler);
-    }
+       }
      }
 
-    ´´´
+
 ### Ejercicio 2: Corregir errores en la declaración de variables
 ### Objetivo:
 Transcribir un código con varias declaraciones de variables y corregir los errores que se encuentren, aplicando lo aprendido en clase sobre tipos de datos y sintaxis.
@@ -89,7 +89,6 @@ String g = k;
 
 ### Codigo
 
-	´´´Java
 
 	package variables;
 
@@ -133,9 +132,7 @@ String g = k;
 
         System.out.println("var2: " + b);  // Imprime el valor de 'b'
 
-
         System.out.println("var3: " + c);  // Imprime el valor de 'c'
-
 
         System.out.println("var4: " + d);  // Imprime el valor de 'd'
 
@@ -146,7 +143,7 @@ String g = k;
        }
     }
 
-    ´´´
+
 ### Ejercicio 3: Casting de variables en Java
 
 ### Objetivo:
@@ -184,60 +181,122 @@ Declara variables para realizar las siguientes conversiones:
 - Recuerda que Java permite **casting explícito** y **auto-boxing/unboxing** para simplificar el manejo de datos entre primitivos y clases envolventes.
 
 ### codigo
-    ´´´Java
 
-        package variables;
+    public class CasteoVariables {
 
-        import java.lang.invoke.VarHandle;
+    public static void main(String[] args) {
 
-        public class CasteoVariables {
+        // 1. Conversión de String a int
 
-        public static void main(String[] args) {
+        String strToInt = "123";
 
-        // Declaración y asignación de variables
+        int intValue = Integer.parseInt(strToInt);
 
-        String LetraNum = "23";
+        System.out.println("String a int: " + intValue);
 
-        int NumeroLetra = 78;
+        // 2. Conversión de String a double
 
-        double NumeroLetrau = 89;
+        String strToDouble = "123.45";
 
-        double NumeroLetrad = 7.9;
+        double doubleValue = Double.parseDouble(strToDouble);
 
-        int NumeroEnter = 14;
+        System.out.println("String a double: " + doubleValue);
 
-        // Conversión de String a Integer
+        // 3. Conversión de int a String
 
-        int NumberONE = Integer.parseInt(LetraNum);
+        int intToStr = 456;
 
-        // Conversión de String a Double
+        String strFromInt = Integer.toString(intToStr);
 
-        double NumberDou = Double.parseDouble(LetraNum);
+        System.out.println("int a String: " + strFromInt);
 
-        // Conversión de Integer a String
+        // 4. Conversión de double a String
 
-        String LetraStr = String.valueOf(NumeroLetra);
+        double doubleToStr = 789.01;
 
-        // Conversión de Double a String
+        String strFromDouble = Double.toString(doubleToStr);
 
-        String LetraDou = String.valueOf(NumeroLetrau);
+        System.out.println("double a String: " + strFromDouble);
 
-        // Conversión de Double a Integer (Casteo explícito)
+        // 5. Casting de double a int y de int a double
 
-        int NumberEnt = (int) NumeroLetrad;
+        double doubleToInt = 123.99;
 
-        // Conversión de Integer a Double (Casteo explícito)
+        int castedInt = (int) doubleToInt;
 
-        Double StriBole = (double) NumeroEnter;
+        int intToDouble = 789;
 
-        // Declaración y uso de variables booleanas
+        double castedDouble = (double) intToDouble;
 
-        String VerdaderoAtex = "true";
+        System.out.println("double a int: " + castedInt);
 
-        boolean VerdadUno = true;
-        
-      }
-    }
+        System.out.println("int a double: " + castedDouble);
 
-    ´´´
+        // 6. Conversión de String a boolean y viceversa
+
+        String strToBool = "true";
+
+        boolean booleanValue = Boolean.parseBoolean(strToBool);
+
+        String strFromBool = Boolean.toString(booleanValue);
+
+        System.out.println("String a boolean: " + booleanValue);
+
+        System.out.println("boolean a String: " + strFromBool);
+
+        // 7. Casting entre float, long y byte
+
+        float floatValue = 123.45f;
+
+        long longValue = (long) floatValue;
+
+        byte byteValue = (byte) longValue;
+
+        System.out.println("float a long: " + longValue);
+
+        System.out.println("long a byte: " + byteValue);
+
+        // 8. Boxing y unboxing implícito entre int y Integer
+
+        int primitiveInt = 10; // Paso 1
+
+        Integer boxedInteger = primitiveInt; // Auto-boxing (Paso 2)
+
+        int unboxedInt = boxedInteger; // Unboxing (Paso 3)
+
+        System.out.println("int: " + primitiveInt);
+
+        System.out.println("Integer (auto-boxed): " + boxedInteger);
+
+        System.out.println("int (unboxed): " + unboxedInt);
+
+        // 9. Boxing y unboxing con otros tipos primitivos
+
+        float primitiveFloat = 12.34f;
+
+        double primitiveDouble = 56.78;
+
+        boolean primitiveBoolean = true;
+
+        Float boxedFloat = primitiveFloat; // Boxing
+
+        Double boxedDouble = primitiveDouble; // Boxing
+
+        Boolean boxedBoolean = primitiveBoolean; // Boxing
+
+        float unboxedFloat = boxedFloat; // Unboxing
+
+        double unboxedDouble = boxedDouble; // Unboxing
+
+        boolean unboxedBoolean = boxedBoolean; // Unboxing
+
+        System.out.println("float: " + primitiveFloat + " -> Float: " + boxedFloat + " -> float: " + unboxedFloat);
+
+        System.out.println("double: " + primitiveDouble + " -> Double: " + boxedDouble + " -> double: " + unboxedDouble);
+
+        System.out.println("boolean: " + primitiveBoolean + " -> Boolean: " + boxedBoolean + " -> boolean: " + unboxedBoolean);
+
+       }
+
+    }  
 
