@@ -13,25 +13,30 @@ Configurar un entorno de desarrollo, declarar variables de diferentes tipos e im
    - Almacenar el valor de Pi con los primeros 7 decimales.
    - Almacenar el valor de Euler con los primeros 15 decimales.
 3. Dentro de la clase, imprime en consola las variables creadas. *(Pista: inicia con `System.out...`)*.
-###codigo 
+
+###codigo
+ 
 ´´´Java
+
 package variables;
+
 public class Deaclavariables {
     public static void main(String[] args) {
-        // Declaración e inicialización de variables
-        String mascota = "nena";
-        double decimales = 2.345;
-        final int dolar;  // Declaración de variable constante
-        dolar = 16;  // Asignación del valor a la constante 'dolar'
-        double pi = 3.1415926;
-        double euler = 2.718281828459045;
-        // Impresión de las variables
-        System.out.println("var1: " + mascota);  // Imprime el valor de 'mascota'
-        System.out.println("var2: " + decimales);  // Imprime el valor de 'decimales'
-        System.out.println("var3: " + dolar);  // Imprime el valor de 'dolar'
-        System.out.println("var4: " + pi);  // Imprime el valor de 'pi'
-        System.out.println("var5: " + euler);  // Imprime el valor de 'euler'
-    }
+        
+// Declaración e inicialización de variables
+String mascota = "nena";
+double decimales = 2.345;
+final int dolar;  // Declaración de variable constante
+dolar = 16;  // Asignación del valor a la constante 'dolar'
+double pi = 3.1415926;
+double euler = 2.718281828459045;
+// Impresión de las variables
+System.out.println("var1: " + mascota);  // Imprime el valor de 'mascota'
+System.out.println("var2: " + decimales);  // Imprime el valor de 'decimales'
+system.out.println("var3: " + dolar);  // Imprime el valor de 'dolar'
+System.out.println("var4: " + pi);  // Imprime el valor de 'pi'
+System.out.println("var5: " + euler);  // Imprime el valor de 'euler'
+}
 }
 ´´´
 ### Ejercicio 2: Corregir errores en la declaración de variables
