@@ -14,36 +14,48 @@ Configurar un entorno de desarrollo, declarar variables de diferentes tipos e im
    - Almacenar el valor de Euler con los primeros 15 decimales.
 3. Dentro de la clase, imprime en consola las variables creadas. *(Pista: inicia con `System.out...`)*.
 
-###codigo
+### codigo
  
-´´´Java
+    ´´´Java
 
-package variables;
+    package variables;
 
-public class Deaclavariables {
+    public class Deaclavariables {
+
     public static void main(String[] args){
+
         String mascota = "nena";
+
         double decimales = 2.345;
+
         final int dolar;
+
         dolar = 16;
+
         double pi = 3.1415926;
+
         double euler = 2.718281828459045;
+
         System.out.println("var1: " +mascota);
+
         System.out.println("var2: " +decimales);
+
         System.out.println("var3: " +dolar);
+
         System.out.println("var4: " +pi);
+
         System.out.println("var5: " +euler);
     }
-}
+     }
 
-´´´
+    ´´´
 ### Ejercicio 2: Corregir errores en la declaración de variables
 ### Objetivo:
 Transcribir un código con varias declaraciones de variables y corregir los errores que se encuentren, aplicando lo aprendido en clase sobre tipos de datos y sintaxis.
 ### Indicaciones:
 1. Crea una segunda clase llamada `CorrigeVariables` con su correspondiente método principal.
 2. Transcribe el código que contiene la declaración de variables y después corrige las que así lo requieran, de acuerdo a lo visto en clase:
-´´´Java
+
 
 Double a = 9;
 
@@ -73,11 +85,11 @@ int y = 14;
 
 String g = k;
 
-’’’
+
 
 ### Codigo
 
-´´´Java
+	´´´Java
 
 	package variables;
 
@@ -131,9 +143,10 @@ String g = k;
 
         System.out.println("var6: " + nombre);  // Imprime el valor de 'nombre'
 
+       }
     }
-}
-´´´
+
+    ´´´
 ### Ejercicio 3: Casting de variables en Java
 
 ### Objetivo:
@@ -169,36 +182,62 @@ Declara variables para realizar las siguientes conversiones:
 - Utiliza el método `System.out.println()` para imprimir los resultados en consola.
 - Si encuentras errores en la conversión, verifica que los valores sean compatibles con el tipo de dato de destino.
 - Recuerda que Java permite **casting explícito** y **auto-boxing/unboxing** para simplificar el manejo de datos entre primitivos y clases envolventes.
-###codigo
-´´´Java
-package variables;
-import java.lang.invoke.VarHandle;
-public class CasteoVariables {
-    public static void main(String[] args) {
+
+### codigo
+    ´´´Java
+
+        package variables;
+
+        import java.lang.invoke.VarHandle;
+
+        public class CasteoVariables {
+
+        public static void main(String[] args) {
+
         // Declaración y asignación de variables
+
         String LetraNum = "23";
+
         int NumeroLetra = 78;
+
         double NumeroLetrau = 89;
+
         double NumeroLetrad = 7.9;
+
         int NumeroEnter = 14;
+
         // Conversión de String a Integer
+
         int NumberONE = Integer.parseInt(LetraNum);
+
         // Conversión de String a Double
+
         double NumberDou = Double.parseDouble(LetraNum);
+
         // Conversión de Integer a String
+
         String LetraStr = String.valueOf(NumeroLetra);
+
         // Conversión de Double a String
+
         String LetraDou = String.valueOf(NumeroLetrau);
+
         // Conversión de Double a Integer (Casteo explícito)
+
         int NumberEnt = (int) NumeroLetrad;
+
         // Conversión de Integer a Double (Casteo explícito)
+
         Double StriBole = (double) NumeroEnter;
+
         // Declaración y uso de variables booleanas
+
         String VerdaderoAtex = "true";
+
         boolean VerdadUno = true;
         
+      }
     }
-}
 
-´´´
+    ´´´
 
